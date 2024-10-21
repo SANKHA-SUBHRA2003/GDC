@@ -1,0 +1,84 @@
+/* Style for the body and container */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+/* Full-screen 3D model */
+.model-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the 3D model to the background */
+}
+
+/* Transparent rounded yellow boxes */
+.info-box-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    width: 80%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+
+.info-box {
+    background-color: rgba(255, 255, 0, 0.7); /* Transparent yellow */
+    border-radius: 20px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.info-box h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* Speaker button */
+.speaker-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 2;
+    color: white;
+}
+
+.speaker-button {
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Layout for the three boxes */
+#who-we-are {
+    align-self: flex-start; /* Align left */
+}
+
+#mission {
+    align-self: center; /* Align center */
+}
+
+#vision {
+    align-self: flex-end; /* Align right */
+}

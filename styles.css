@@ -1,0 +1,237 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Video background */
+.video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 3D Model container */
+.model-container {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 100%;
+    height: 80vh;
+    z-index: 1;
+    overflow: hidden;
+}
+
+/* New Parallelogram Button on the 3D Model */
+.model-button {
+    position: absolute;
+    top: 50%; /* Adjust vertically to chest area */
+    left: 50%; /* Center horizontally over the model */
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 50px;
+    background-color: #ff2972;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    cursor: pointer;
+    z-index: 200; /* Ensure it is above the model */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%) skew(-20deg); /* Parallelogram shape */
+    transition: background-color 0.3s;
+}
+
+.model-button:hover {
+    background-color: #ff006d;
+}
+
+.model-button .button-text {
+    transform: skew(20deg); /* Correct text orientation */
+}
+
+/* Spiral Menu */
+/* Spiral Menu */
+/* Background Overlay (Transparent Black Board) */
+/* Background Overlay (Blurred Background) */
+/* Background Overlay (Blurred Background) */
+/* Background Overlay (Blurred Background) */
+/* Background Overlay (Blurred Background) */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black */
+    z-index: 90;
+    display: none; /* Initially hidden */
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px); /* Blur the background */
+}
+
+/* Spiral Menu */
+.menu {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Positioning Menu Items manually */
+.menu li {
+    position: absolute;
+    list-style: none;
+    width: 120px; /* Larger icon size */
+    height: 120px; /* Larger icon size */
+    text-align: center;
+    transition: 0.5s;
+    font-size: 50px; /* Larger icon size */
+}
+
+/* Top Menu Item */
+.menu li:nth-child(1) {
+    top: -180px; /* Moves the top menu item further up */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Lower Left Menu Item */
+.menu li:nth-child(2) {
+    bottom: -180px; /* Moves the lower-left item down */
+    left: -180px;
+    transform: translateY(50%);
+}
+
+/* Lower Right Menu Item */
+.menu li:nth-child(3) {
+    bottom: -180px; /* Moves the lower-right item down */
+    right: -180px;
+    transform: translateY(50%);
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 120px; /* Larger icon size */
+    height: 120px; /* Larger icon size */
+    text-decoration: none;
+    font-size: 50px; /* Larger icon size */
+    border-radius: 50%;
+    color: transparent;
+    transition: 1s;
+    filter: drop-shadow(0 0 2px var(--clr));
+}
+
+.menu.active a {
+    color: var(--clr);
+}
+
+/* Shape Button */
+.shape-button {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%);
+    width: 180px;
+    height: 60px;
+    background-color: black;
+    color: yellow;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+    cursor: pointer;
+}
+
+/* Hide menu button */
+.menuToggle {
+    display: none;
+}
+
+/* Glowing Title */
+.glowing-title {
+    font-size: 4rem;
+    text-align: center;
+    color: yellow; /* Change text color to yellow */
+    text-shadow: 0 0 15px black, 0 0 10px black, 0 0 15px black; /* Add black glow */
+    font-family: 'Orbitron', sans-serif;
+    position: absolute;
+    top: 5%;
+    width: 100%;
+    z-index: 2;
+    transition: color 0.3s, text-shadow 0.3s;
+}
+
+/* Speaker and Social Media Buttons */
+.speaker-buttons {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 200;
+    display: flex;
+    align-items: center;
+}
+
+.speaker-button, .social-button {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    color: #000;
+    font-size: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.speaker-button:hover, .social-button:hover {
+    background-color: #ccc;
+}
+
+.social-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.social-button.instagram {
+    background-color: #e4405f;
+}
+
+.social-button.linkedin {
+    background-color: #0077b5;
+}
+
+.social-button ion-icon {
+    font-size: 24px;
+    color: white;
+}

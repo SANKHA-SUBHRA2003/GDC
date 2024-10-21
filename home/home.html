@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Developer's Community</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 3D Model Background -->
+    <div class="model-container">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.32/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/R7uAgjso4g5nJ5a3/scene.splinecode"></spline-viewer>
+    </div>
+
+    <!-- Transparent Yellow Boxes with Text -->
+    <div class="info-box-container">
+        <div class="info-box" id="who-we-are">
+            <h2>Who Are We?</h2>
+            <p>We the Game Developers Community SRM, aim to empower the existing and to nurture the budding game designers and developers in our University. We, as a collective plan to dive headfirst into the ever-expanding world of game development and create experiences worth experiencing.</p>
+        </div>
+        <div class="info-box" id="mission">
+            <h2>Mission</h2>
+            <p>Our mission is to foster creativity, collaboration, and technical skills in game development among students by providing a platform for learning and innovation. We aim to empower future game developers through engaging events, practical experiences, and industry exposure, promoting a vibrant gaming culture in our college.</p>
+        </div>
+        <div class="info-box" id="vision">
+            <h2>Vision</h2>
+            <p>To be a leading college club that inspires and nurtures the next generation of game developers, creating an ecosystem where students can explore their passion for gaming, develop industry-relevant skills, and establish meaningful connections with professionals in the game development community.</p>
+        </div>
+    </div>
+
+    <!-- Audio (Background Music) -->
+    <audio id="background-music" loop>
+        <source src="../landing/audio.mp3" type="audio/mp3">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Speaker Button -->
+    <div class="speaker-buttons">
+        <div class="speaker-button" id="speaker-toggle" onclick="toggleMusic()">
+            <ion-icon name="volume-high-outline"></ion-icon>
+        </div>
+    </div>
+
+    <!-- Ionicons Script for Speaker Icon -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- JavaScript -->
+    <script src="scripts.js"></script>
+</body>
+</html>
